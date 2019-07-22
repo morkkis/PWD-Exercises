@@ -1,4 +1,4 @@
-// @import '_magic';
+@import '_magic';
 
 .cf {
     display: grid;
@@ -20,6 +20,14 @@
     grid-row-gap: 40px;
     grid-area: content;
     padding: 20px;
+}
+
+.cf-sidebar {
+    grid-area: sidebar;
+}
+
+.cf-footer {
+    grid-area: footer;
 }
 
 .cf-card {

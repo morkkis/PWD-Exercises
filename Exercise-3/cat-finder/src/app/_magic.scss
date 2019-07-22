@@ -10,16 +10,24 @@ $color-lightest: #feffff;
 }
 
 .cf-header {
+    align-items: center;
     background-color: $color-darker;
     color: $color-lightest;
+    display: flex;
+    font-size: 36px;
+    letter-spacing: .1em;
+    padding: 0 20px;
 }
 
 .cf-sidebar {
     background-color: $color-lighter;
+    padding: 20px;
 }
 
 .cf-footer {
     background-color: $color-darkest;
+    color: $color-lightest;
+    padding: 5px 20px;
 }
 
 .cf-content {
@@ -28,5 +36,4 @@ $color-lightest: #feffff;
 
 .cf-card {
     border-color: $color-base;
-    border-radius: 3px;
 }

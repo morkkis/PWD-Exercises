@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { AppService } from './app.service';
 import { ICat } from './interfaces/cat.interface';
 
@@ -10,13 +9,13 @@ import { ICat } from './interfaces/cat.interface';
 })
 export class AppComponent implements OnInit {
   title = 'cat-finder';
+  catList: ICat[];
 
-  constructor(private appService: AppService) {
-  }
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
-    this.appService.getCatList().subscribe((catList: ICat[]) => {
-      console.log(catList);
+    this.appService.getCatList().subscribe((cl: ICat[]) => {
+      this.catList = cl;
     });
   }
 }

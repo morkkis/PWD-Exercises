@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppService } from './app.service';
 import { CatItemComponent } from './components/cat-item/cat-item.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CatItemComponent } from './components/cat-item/cat-item.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ScrollingModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

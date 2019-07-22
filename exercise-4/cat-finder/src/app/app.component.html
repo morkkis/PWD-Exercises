@@ -1,2 +1,7 @@
-<cf-cat-item *ngFor="let catItem of catList" [cat]="catItem"></cf-cat-item>
+<cdk-virtual-scroll-viewport itemSize="{{cardSize / cardsInRaw}}"
+                             class="cat-container">
+  <cf-cat-item *cdkVirtualFor="let catItem of catList"
+               class="cat-item"
+               [cat]="catItem"></cf-cat-item>
+</cdk-virtual-scroll-viewport>
 <router-outlet></router-outlet>

@@ -1,0 +1,55 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/mock-server/dist
+/src/assets/fonts/mp-icons
+/src/styles/mp-icons.scss
+/src/styles/mp-icons-reference.scss
+/src/styles/mp-icons-multicolor.scss
+
+# dependencies
+/node_modules
+/mock-server/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+/.history
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+package-lock.json
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# git Submodules
+
+# Docker files
+Dockerfile
+Dockerfile.test
+
+xunit.xml

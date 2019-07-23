@@ -4,7 +4,7 @@
   "description": "This is a mock server app",
   "main": "index.js",
   "scripts": {
-    "serve": "yarn remove-dist-folder && yarn ts-to-js && concurrently --kill-others \"yarn watch-ts-to-js\" \"yarn run-server\"",
+    "serve": "npm run remove-dist-folder && npm run ts-to-js && concurrently --kill-others \"npm run watch-ts-to-js\" \"npm run run-server\"",
     "remove-dist-folder": "rimraf dist/",
     "ts-to-js": "tsc",
     "watch-ts-to-js": "tsc -w",

@@ -1,0 +1,80 @@
+@import '_magic';
+
+.cf {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 80px 1fr 30px;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    height: 100%;
+}
+.cf-header {
+    grid-area: header;
+}
+
+.cf-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 40px;
+    grid-area: content;
+    padding: 20px;
+}
+
+.cf-sidebar {
+    grid-area: sidebar;
+}
+
+.cf-footer {
+    grid-area: footer;
+}
+
+.cf-card {
+    height: 300px;
+    justify-self: center;
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cf-card__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cf_card__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cf-card__button {
+
+}
+
+.cf-card__photo-container {
+    text-align: center;
+}
+
+.cf-card__photo {
+    max-height: 150px;
+}
+
+.cf-card__abstract {
+}
+
+.cf-card__breed {}
+
+
+.cf-card__abstract-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cf-card__label {}
+
+.cf-card__value {
+
+}

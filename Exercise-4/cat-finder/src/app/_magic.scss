@@ -1,0 +1,46 @@
+
+$color-darkest: #17252a;
+$color-darker: #2b7a78;
+$color-base: #3aafa9;
+$color-lighter: #def2f1;
+$color-lightest: #feffff;
+
+.cf {
+    font-family: sans-serif;
+}
+
+.cf-header {
+    align-items: center;
+    background-color: $color-darker;
+    color: $color-lightest;
+    display: flex;
+    font-size: 36px;
+    letter-spacing: .1em;
+    padding: 0 20px;
+}
+
+.cf-sidebar {
+    background-color: $color-lighter;
+    padding: 20px;
+}
+
+.cf-footer {
+    background-color: $color-darkest;
+    color: $color-lightest;
+    padding: 5px 20px;
+}
+
+.cf-content {
+    background-color: $color-lightest;
+}
+
+.cf-card {
+    border: 1px solid $color-base;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 0 $color-lighter;
+
+    &:hover {
+        box-shadow: 0 0 2px $color-lighter;
+    }
+}
+

@@ -1,0 +1,26 @@
+@import "./../../../styles/breakpoints.scss";
+@import "./../../../styles/colors";
+
+.cf-navigation {
+  padding: 10px 0;
+  @media #{$break-1}, #{$break-2} {
+    display: flex;
+  }
+}
+
+.cf-navigation--item {
+  background-color: $color-base;
+  text-decoration: none;
+  color: $color-lightest;
+  padding: 20px 10px;
+  margin: 5px 0;
+  display: block;
+  @media #{$break-1}, #{$break-2} {
+    text-align: center;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $color-darker;
+  }
+}

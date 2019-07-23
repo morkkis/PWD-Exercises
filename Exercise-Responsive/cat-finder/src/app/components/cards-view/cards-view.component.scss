@@ -1,3 +1,5 @@
+@import "./../../../styles/breakpoints.scss";
+
 .cf-card-list {
   margin: 20px;
   height: calc(100vh - 80px - 20px);
@@ -6,6 +8,17 @@
 
 .cf-card-list .cdk-virtual-scroll-content-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 40px;
+
+  @media #{$break-1} {
+    grid-template-columns: 1fr;
+  }
+
+  @media #{$break-2} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$break-3} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

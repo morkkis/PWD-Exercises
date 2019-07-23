@@ -15,11 +15,8 @@
 }
 
 .cf-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 40px;
     grid-area: content;
-    padding: 20px;
+    overflow: auto;
 }
 
 .cf-sidebar {
@@ -28,54 +25,4 @@
 
 .cf-footer {
     grid-area: footer;
-}
-
-.cf-card {
-    height: 300px;
-    justify-self: center;
-    padding: 10px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.cf-card__head {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cf_card__name {
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cf-card__photo-container {
-    text-align: center;
-}
-
-.cf-card__photo {
-    max-height: 150px;
-}
-
-.cf-card__abstract-item {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cf-navigation {
-    padding: 10px 0;
-}
-
-.cf-navigation--item {
-    background-color: $color-base;
-    text-decoration: none;
-    color: $color-lightest;
-    padding: 20px 10px;
-    margin: 5px 0;
-    display: block;
-
-    &:hover {
-        background-color: $color-darker;
-    }
 }

@@ -44,3 +44,19 @@ $color-lightest: #feffff;
     }
 }
 
+.cf-card__label {}
+
+.cf-card__value {
+
+}
+
+.cf-card__abstract {
+}
+
+.cf-card__breed {}
+
+.cf-card__button {
+    &--active {
+        color: #f66;
+    }
+}

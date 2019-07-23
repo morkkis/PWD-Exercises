@@ -21,7 +21,6 @@ $color-lightest: #feffff;
 
 .cf-sidebar {
     background-color: $color-lighter;
-    padding: 20px;
 }
 
 .cf-footer {
@@ -44,19 +43,45 @@ $color-lightest: #feffff;
     }
 }
 
-.cf-card__label {}
+.cf-card__head {
+    align-items: center;
+}
+.cf_card__name {
+    color: $color-darkest;
+    margin: 0 10px;
+}
+.cf-card__label {
+    color: $color-base;
+    font-size: 12px;
+}
 
 .cf-card__value {
-
+    color: $color-darker;
+    font-size: 14px;
 }
 
-.cf-card__abstract {
+.cf-card__breed {
+    color: $color-darkest;
+    margin-bottom: 5px;
 }
-
-.cf-card__breed {}
 
 .cf-card__button {
+    border: none;
+    color: $color-base;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    &:hover {
+        color: $color-darker;
+        cursor: pointer;
+    }
+
     &--active {
         color: #f66;
     }
+
+
 }

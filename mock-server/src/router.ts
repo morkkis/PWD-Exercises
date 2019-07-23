@@ -12,7 +12,9 @@ router.get('/api/getCatList', async (req: Request, res: Response) => {
 router.delete('/api/deleteCat/:id', async (req: Request, res: Response) => {
   console.log(`-Delete /api/removeCat/${req.params.id}`);
   if ((+req.params.id) < 5) {
-	  res.status(409).send();
+	  setTimeout(() => {
+		res.status(409).send();
+	  }, 1000);
   } else {
 	  setTimeout(() => {
 		res.status(204).send();
@@ -21,9 +23,15 @@ router.delete('/api/deleteCat/:id', async (req: Request, res: Response) => {
 });
 router.put('/api/addToFavorite/:id', async (req: Request, res: Response) => {
   console.log(`-Put /api/addToFavorite/${req.params.id}`);
-  setTimeout(() => {
-	res.status(204).send();
-  }, 3000);
+  if ((+req.params.id) === 1 || (+req.params.id) === 3) {
+	setTimeout(() => {
+		res.status(409).send();
+	}, 1000);
+  } else {
+	  setTimeout(() => {
+		res.status(204).send();
+	  }, 2000);
+  }
 });
 
 export default router;

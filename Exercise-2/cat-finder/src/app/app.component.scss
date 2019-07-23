@@ -1,9 +1,9 @@
-// @import '_magic';
+@import "./../styles/variables";
 
 .cf {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 80px 1fr 20px;
+    grid-template-rows: $headerSize 1fr $footerSize;
     grid-template-areas:
         "header header"
         "sidebar content"
@@ -19,7 +19,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 40px;
     grid-area: content;
-    margin: 20px;
+    padding: 20px;
 }
 
 .cf-card {

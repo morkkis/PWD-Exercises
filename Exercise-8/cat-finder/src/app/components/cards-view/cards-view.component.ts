@@ -24,15 +24,15 @@ export class CardsViewComponent implements OnInit {
   }
 
   handleLikeClick(catItem: ICat) {
-    // this.catList = this.catList.map(item => item === catItem ? {...item, like: !item.like} : item);
     this.replaceItemInList({...catItem, like: !catItem.like});
-    this.catService.setLikeCat(catItem.id).subscribe(_ => true, this.handleLikeClickError.bind(this, catItem));
+    const onError = this.handleLikeClickError.bind(this, catItem);
+    this.catService.setLikeCat(catItem.id).subscribe(_ => true, onError);
   }
 
   handleLikeClickError(catBeforeChange: ICat, error) {
     console.warn(error);
     const mess = `Could not like ${catBeforeChange.name} cat`;
-    this.setErrorMessage(mess);
+    this.showToastErrorMessage(mess);
     this.replaceItemInList({...catBeforeChange});
   }
 
@@ -40,23 +40,24 @@ export class CardsViewComponent implements OnInit {
     this.catList = this.catList.map(item => item.id === itemToReplace.id ? itemToReplace : item);
   }
 
-  setErrorMessage(message: string) {
+  handleRemoveClick(catItem: ICat) {
+    this.catList = this.catList.filter(item => item !== catItem);
+    const onError = this.handleRemoveClickError.bind(this, catItem);
+    this.catService.removeLikeCat(catItem.id).subscribe(_ => true, onError);
+  }
+
+  handleRemoveClickError(removedCat: ICat, error) {
+    console.warn(error);
+    const mess = `Could remove ${removedCat.name} cat`;
+    this.showToastErrorMessage(mess);
+    this.catList = [...this.catList, removedCat];
+    this.catList.sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+  }
+
+  showToastErrorMessage(message: string) {
     this.toastr.error(message, null, {
       timeOut: 5000,
       positionClass: 'toast-top-center'
     });
-  }
-
-  handleRemoveClick(catItem: ICat) {
-    this.catList = this.catList.filter(item => item !== catItem);
-    this.catService.removeLikeCat(catItem.id).subscribe(_ => true, this.handleRemoveClickError.bind(this, catItem));
-  }
-
-  handleRemoveClickError(catBeforeChange: ICat, error) {
-    console.warn(error);
-    const mess = `Could remove ${catBeforeChange.name} cat`;
-    this.setErrorMessage(mess);
-    this.catList = [...this.catList, catBeforeChange];
-    this.catList.sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
   }
 }

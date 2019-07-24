@@ -88,7 +88,7 @@
 						<li>Create cards-view component and put all 8 cards in it</li>
 						<li>Add route - for route "" load cards-view component</li>
 						<li>Create card-item component</li>
-						<li>move card styles and data to card-item component</li>
+						<li>Move card styles and data to card-item component</li>
 						<li>in cards-view component use card-item component to render 8 cards</li>
 					</ul>
 				</section>
@@ -114,7 +114,7 @@
 						<li>Proxy - proxy "/api/*" requests to mock server (port 4202)</li>
 						<li>Create Cat interface - age: number; breed: string; coat: string; gender: 'Male' | 'Female'; id: number; imgUrl: string; like: boolean; name: string;</li>
 						<li>Request cat list - create cat service with getCatList method to request lcat list (GET: 'api/getCatList')</li>
-						<li>get cat list - in CardsView make a request for cat list using the service and save the result</li>
+						<li>Get cat list - in CardsView make a request for cat list using the service and save the result</li>
 						<li>Reder the cat list - use *ngFor</li>
 						<li>Bind cat data - in CardItemComponent get cat data (name, age, etc.) and show it in html</li>
 					</ul>
@@ -146,7 +146,7 @@
 						</li>
 						<li>Optimistic Like - When clicking on like change it in UI without waiting for BE respond, on error revert it</li>
 						<li>Optimistic Remove - When clicking on remove item from list without waiting for BE respond, on error revert it (make sure it's sorted)</li>
-						<li>Optinal - add toaster on error to inform the user somthing went wrong</li>
+						<li>Optinal - add toast on error to notify the user that something went wrong</li>
 					</ul>
 				</section>
             </section>
@@ -159,23 +159,23 @@
 						<li>Responsice Breaks - add 3 breaks [0-728px], [729px-1024px], [1025px-INFINTE]</li>
 						<li>Reponsive style - for break:
 							<ul>
-								<li>[1025px-INFINTE] - layout will stay the same (4 cards in row)</li>
+								<li>[1025px-INFINTE] - layout will stay as before (4 cards in row)</li>
 								<li>[729px-1024px]:
 									<ul>
-										<li>layout will be chaged - sidebar will move to be under header, take row width, show navigtors horizontal</li>
+										<li>layout will be changed - sidebar will move to be under header, taking full row width, show navigation horizontaly</li>
 										<li>show 2 cards in row instead of 4</li>
 									</ul>
 								</li>
 								<li>[0-728px]:
 									<ul>
-										<li>layout will be chaged - sidebar will move to be under header, take row width, show navigtors horizontal</li>
+										<li>layout will be changed - sidebar will move to be under header, taking full row width, show navigation horizontaly</li>
 										<li>show 1 cards in row instead of 4</li>
 									</ul>
 								</li>
 							</ul>
-							
+
 						</li>
-						<li>Reponsive virtual scroll - make cdk-virtual-scroll-viewport responsive</li>
+						<li>Responsive virtual scroll - make cdk-virtual-scroll-viewport responsive</li>
 					</ul>
 				</section>
             </section>
@@ -188,7 +188,7 @@
 						<li>About Module - create aboute module with router</li>
 						<li>About Component - create aboute component and connect it to module</li>
 						<li>Navigation - on routing to "/about" show about module</li>
-						<li>Optiimastion Code Spliting- load about modle in lazy loading way</li>
+						<li>Optimastion Code Spliting - load about module in lazy loading way</li>
 					</ul>
 				</section>
             </section>

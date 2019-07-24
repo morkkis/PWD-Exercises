@@ -5,23 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ScrollingModule} from '@angular/cdk/scrolling';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { CardsViewComponent } from './components/cards-view/cards-view.component';
-import { CardItemComponent } from './components/card-item/card-item.component';
+import * as components from './components';
 import { CatService } from './services/cat.service';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+const com = [
+  AppComponent,
+  components.HeaderComponent,
+  components.FooterComponent,
+  components.SideBarComponent,
+  components.CardsViewComponent,
+  components.CardItemComponent,
+];
+
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SideBarComponent,
-    CardsViewComponent,
-    CardItemComponent
+    ...com
   ],
   imports: [
     BrowserModule,

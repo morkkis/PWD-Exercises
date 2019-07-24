@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { CatService } from '../../services/cat.service';
 import { ICat } from '../../interfaces/cat.interface';
 import { ToastrService } from 'ngx-toastr';
@@ -18,9 +18,21 @@ export class CardsViewComponent implements OnInit {
               private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.cardsInRaw = this.calcCardsInRaw();
     this.catService.getCatList().subscribe((cl: ICat[]) => {
       this.catList = cl;
     });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.cardsInRaw = this.calcCardsInRaw();
+  }
+
+  calcCardsInRaw(): number {
+    const viewWidth = window.outerWidth;
+    return viewWidth >= 1025 ? 4 :
+      viewWidth >= 729 ? 2 : 1;
   }
 
   handleLikeClick(catItem: ICat) {

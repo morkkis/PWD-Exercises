@@ -1,10 +1,13 @@
 <div class="cf-card">
   <div class="cf-card__head">
-    <button class="cf-card__button cf-card__button--like" [ngClass]="{'cf-card__button--active': data.like}">
-      <i class="fas fa-heart" ></i>
+    <button class="cf-card__button cf-card__button--like"
+            [ngClass]="{'cf-card__button--active': data.like}"
+            (click)="handleLikeClick.emit(data)">
+      <i class="fas fa-heart"></i>
     </button>
     <div class="cf_card__name">{{data.name}}</div>
-    <button class="cf-card__button cf_card_button--delete">
+    <button class="cf-card__button cf_card_button--delete"
+            (click)="handleRemoveClick.emit(data)">
       <i class="fas fa-trash"></i>
     </button>
   </div>

@@ -2,9 +2,12 @@
 @import "./../../../styles/colors";
 
 .cf-navigation {
-  padding: 10px 0;
+  // make display horizontal
   @media #{$break-1}, #{$break-2} {
     display: flex;
+  }
+  @media #{$break-3} {
+    padding: 10px 0;
   }
 }
 

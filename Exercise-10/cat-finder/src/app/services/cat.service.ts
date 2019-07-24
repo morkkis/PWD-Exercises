@@ -12,4 +12,12 @@ export class CatService {
   getCatList(): Observable<ICat[]> {
     return this.http.get<ICat[]>('api/getCatList');
   }
+
+  setLikeCat(id: number) {
+    return this.http.put(`/api/addToFavorite/${id}`, null);
+  }
+
+  removeLikeCat(id: number) {
+    return this.http.delete(`/api/deleteCat/${id}`);
+  }
 }

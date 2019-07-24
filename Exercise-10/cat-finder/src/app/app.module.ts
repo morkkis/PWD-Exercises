@@ -11,6 +11,8 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { CardsViewComponent } from './components/cards-view/cards-view.component';
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { CatService } from './services/cat.service';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CatService } from './services/cat.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ScrollingModule
+    ScrollingModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [CatService],
   bootstrap: [AppComponent]

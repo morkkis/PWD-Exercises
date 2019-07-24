@@ -64,6 +64,7 @@
     background: transparent;
     border: none;
     color: $color-base;
+    cursor: pointer;
     font-size: 20px;
     margin: 0;
     overflow: visible;
@@ -72,12 +73,14 @@
 
     &:hover {
         color: $color-darker;
-        cursor: pointer;
     }
 
     &--active {
         color: #f66;
+
+        &:hover {
+
+          color: #d65d5d;
+        }
     }
-
-
 }

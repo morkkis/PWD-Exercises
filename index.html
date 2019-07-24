@@ -7,8 +7,8 @@
 
 	<title>reveal.js</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/night.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/night.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.min.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -20,27 +20,31 @@
 	</script>
 	<style>
 		.reset-img {
-		  border: 0 !important;
-		  background: none !important;
-		  box-shadow: none !important;
+			border: 0 !important;
+			background: none !important;
+			box-shadow: none !important;
 		}
-        #chapters {
-            margin: 0;
-            list-style-type: none;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 20% 20% 20% 20% 20%;
+
+		#chapters {
+			margin: 0;
+			list-style-type: none;
+			display: grid;
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 20% 20% 20% 20% 20%;
 			grid-auto-flow: column;
 			font-size: 34px;
 			grid-gap: 7px;
-        }
+		}
+
 		.slide-top {
 			top: 0 !important;
 		}
+
 		.reveal .list {
 			font-size: 30px;
 		}
-		.list > li {
+
+		.list>li {
 			margin-bottom: 20px;
 		}
 	</style>
@@ -49,45 +53,200 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-            <section>
-                <section>
+			<section>
+				<section>
 					<h2>Exercise-0</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
 						<li>Initial "cat-finder" project in angular</li>
 					</ol>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-1</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
 						<li>In app.component.html - Create card width: height 300px, width 200px, border 1px</li>
 						<li>In app.component.html - Create and align 8 cards</li>
 					</ol>
 				</section>
-            </section>
-            <section>
-                <section>
+				<section>
+					<img style="height: 500px" src="./assets/empty-card.png" alt="">
+				</section>
+				<section data-transition="none-out">
+					<pre class="fragment" style="width: 100%;height: 100%;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+						</code></pre>
+					<pre class="fragment" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								.cf-card {
+									border: 1px solid;
+									height: 300px;
+									width: 200px;
+								}
+						</code></pre>
+				</section>
+				<section>
+					<img style="height: 500px" src="./assets/padding-box.png" alt="">
+				</section>
+				<section data-transition="none-out">
+					<pre class="" style="width: 100%;height: 100%;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+						</code></pre>
+					<pre class="" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								.cf-card {
+									border: 1px solid;
+									height: 300px;
+									padding: 10px;
+									width: 200px;
+								}
+						</code></pre>
+				</section>
+				<section>
+					<img style="height: 500px" src="./assets/padding-box-padding.png" alt="">
+				</section>
+				<section data-transition="none-out">
+					<pre class="" style="width: 100%;height: 100%;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+						</code></pre>
+					<pre class="" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								.cf-card {
+									border: 1px solid;
+									height: 278px;
+									padding: 10px;
+									width: 178px;
+								}
+						</code></pre>
+					<h4 class="fragment">We need better way</h4>
+				</section>
+				<section data-transition="none-out">
+					<pre class="" style="width: 100%;height: 100%;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+						</code></pre>
+					<pre class="" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								.cf-card {
+									border: 1px solid;
+									height: 300px;
+									padding: 10px;
+									width: 200px;
+								}
+						</code></pre>
+					<h4>global.scss</h4>
+					<pre class="" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								html {
+									box-sizing: border-box;
+
+									*,
+									*::before,
+									*::after {
+										box-sizing: inherit;
+									}
+								}
+						</code></pre>
+				</section>
+				<section>
+						<h5>Now let's make 8 cards</h5>
+						<pre class="" style="width: 100%;height: 100%;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+								<div class="cf-card">
+									Lorem ipsum...
+								</div>
+						</code></pre>
+					</section>
+					<section>
+							<img style="height: 500px" src="./assets/8-cards-block.png" alt="">
+					</section>
+					<section>
+							<pre class="" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+									.cf-card {
+										border: 1px solid;
+										height: 300px;
+										padding: 10px;
+										width: 200px;
+										display: inline;
+									}
+							</code></pre>
+					</section>
+					<section>
+							<img style="max-height: 500px" src="./assets/8-cards-inline.png" alt="">
+					</section>
+					<section>
+							<pre class="" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+									.cf-card {
+										border: 1px solid;
+										height: 300px;
+										padding: 10px;
+										width: 200px;
+										display: inline-block;
+									}
+							</code></pre>
+					</section>
+					<section>
+							<img style="height: 500px" src="./assets/8-cards-inline-block.png" alt="">
+					</section>
+					<section>
+							<pre class="" style="width: 100%;height: 100%;"><code class="language-scss" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim>
+									.cf-content {
+											display: grid;
+											grid-template-columns: repeat(4, 1fr);
+											grid-row-gap: 40px;
+									}
+							</code></pre>
+					</section>
+					<section>
+							<img style="height: 500px" src="./assets/8-cards.png" alt="">
+					</section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-2</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
-						<li>In app.component.html - Define and create app layout with header, footer, sidebar & content container</li>
+						<li>In app.component.html - Define and create app layout with header, footer, sidebar & content
+							container</li>
 						<li>In app.component.html - Put in content container all 8 cards</li>
 					</ol>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-3</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
-						<li>Break layout to components - create component for header, footer, sidebar & content container and use it in app.component.html</li>
+						<li>Break layout to components - create component for header, footer, sidebar & content
+							container and use it in app.component.html</li>
 						<li>Create cards-view component and put all 8 cards in it</li>
 						<li>Add route - for route "/" load cards-view component</li>
 						<li>Create card-item component</li>
@@ -104,32 +263,34 @@
 > ng g c components/side-bar</code></pre>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-out">
 					<h5>Break To Components Layout</h5>
 					<ul style=" font-size: 26px; width: 100%;">
 						<li>Create cards-view component with router and move the content to the component
 							<div class="fragment">
-								<pre style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>> ng g c components/cards-view</code></pre>
+								<pre
+									style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>> ng g c components/cards-view</code></pre>
 							</div>
-							<div class="fragment" >
+							<div class="fragment">
 								<small style="margin-top: 20px;">app-routing.module.ts:</small>
 								<pre style="width: 100%;height: 100%; margin: 0;"><code class="language-ts" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>const routes: Routes = [
   { path: '', component: CardsViewComponent },
 ];</code></pre>
 							</div>
-						
-</li>
+
+						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Break To Components Layout</h5>
 					<ul style=" font-size: 26px; width: 100%;">
 						<li>Create cards-view component with router and move the content to the component
 							<div>
-								<small style="margin-top: 20px;">app.component.html - add router-outlet for routing</small>
+								<small style="margin-top: 20px;">app.component.html - add router-outlet for
+									routing</small>
 								<pre style="width: 100%;height: 100%; margin:0;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1.4;" data-trim><div class="cf">
 	<header class="cf-header">
 		<cf-header></cf-header>
@@ -146,17 +307,18 @@
 </div>
 </code></pre>
 							</div>
-						
-</li>
+
+						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Break To Components Layout</h5>
 					<ul style=" font-size: 26px; width: 100%;">
 						<li>Create card-item component and use it in cards-view component
 							<div class="fragment">
-								<pre style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>> ng g c components/card-item</code></pre>
+								<pre
+									style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>> ng g c components/card-item</code></pre>
 								<small style="margin-top: 20px;">card-item.component.html:</small>
 								<pre style="width: 100%;height: 100%; margin: 0;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim><div class="cf-card">
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, vero.
@@ -172,17 +334,18 @@
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-4</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
 						<li>Style card-item component - add fields and styles to component</li>
-						<li>Add navigations - in sidebar component add navigations to "Main" (route "/") and to "About" (route "/about")</li>
+						<li>Add navigations - in sidebar component add navigations to "Main" (route "/") and to "About"
+							(route "/about")</li>
 					</ol>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
@@ -199,20 +362,23 @@
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-5</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
 						<li>Mock Server - Clone mock server, install all dependencies, start it</li>
 						<li>Proxy - proxy "/api/*" requests to mock server (port 4202)</li>
-						<li>Create Cat interface - age: number; breed: string; coat: string; gender: 'Male' | 'Female'; id: number; imgUrl: string; like: boolean; name: string;</li>
-						<li>Request cat list - create cat service with getCatList method to request lcat list (GET: 'api/getCatList')</li>
-						<li>Get cat list - in CardsView make a request for cat list using the service and save the result</li>
+						<li>Create Cat interface - age: number; breed: string; coat: string; gender: 'Male' | 'Female';
+							id: number; imgUrl: string; like: boolean; name: string;</li>
+						<li>Request cat list - create cat service with getCatList method to request lcat list (GET:
+							'api/getCatList')</li>
+						<li>Get cat list - in CardsView make a request for cat list using the service and save the
+							result</li>
 						<li>Reder the cat list - use *ngFor</li>
 						<li>Bind cat data - in CardItemComponent get cat data (name, age, etc.) and show it in html</li>
 					</ol>
@@ -221,7 +387,7 @@
 					<h5>Add Proxy to Mock Server</h5>
 					<ul style=" font-size: 26px; ">
 						<li>Create proxy.conf.json file under root folder (near package.json)</li>
-						<li class="fragment">At "proxy.conf.json" config  proxy to all "/api/*" to http://localhost:4202:
+						<li class="fragment">At "proxy.conf.json" config proxy to all "/api/*" to http://localhost:4202:
 							<pre class="fragment" style="width: 100%;height: 100%;"><code class="language-json" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>{
   "/api/*": {
 	"target": "http://localhost:4202",
@@ -230,9 +396,10 @@
   }
 }</code></pre>
 						</li>
-						<li class="fragment" >Add proxyConfig to proxy.conf.json at angular.json file.
+						<li class="fragment">Add proxyConfig to proxy.conf.json at angular.json file.
 							<div class="fragment" style="margin-top: 10px;">
-								<div>Open angular.json file,  under projects -> architect -> serve -> options add "proxyConfig": "proxy.conf.json"</div>
+								<div>Open angular.json file, under projects -> architect -> serve -> options add
+									"proxyConfig": "proxy.conf.json"</div>
 								<pre style="width: 100%;height: 100%;"><code class="language-json" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>{
   "serve": {
 	  "options": {
@@ -240,10 +407,11 @@
 		"proxyConfig": "proxy.conf.json"
 	  },
   },
-}</code></pre></div>
+}</code></pre>
+							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-out">
 					<h5>Create Cat Interface</h5>
@@ -267,7 +435,8 @@
 					<h5>Create Service</h5>
 					<ul style="font-size: 26px; width: 100%;">
 						<li>Create cat service
-							<pre class="fragment" style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>> ng g s services/cat</code></pre>
+							<pre class="fragment"
+								style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>> ng g s services/cat</code></pre>
 						</li>
 						<li class="fragment">At app module, add "HttpClientModule" and CatService
 							<div class="fragment">
@@ -289,8 +458,9 @@
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Create Service</h5>
 					<ul style="font-size: 26px; width: 100%;">
-						<li>Inject HttpClient to service and create "getCatList" function for retriving cat list (GET 'api/getCatList')
-							
+						<li>Inject HttpClient to service and create "getCatList" function for retriving cat list (GET
+							'api/getCatList')
+
 							<div class="fragment">
 								<small style="margin-top: 20px;">cat.service.ts:</small>
 								<pre style="width: 100%;height: 100%; margin: 0;"><code class="language-ts" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>import { Injectable } from '@angular/core';
@@ -312,7 +482,7 @@ export class CatService {
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Request data</h5>
@@ -343,7 +513,7 @@ export class CardsViewComponent implements OnInit {
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Render cat list</h5>
@@ -358,14 +528,14 @@ export class CardsViewComponent implements OnInit {
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-6</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
 						<li>CDK - install "@angular/cdk"</li>
 						<li>ScrollingModule - import ScrollingModule in AppModule</li>
@@ -376,12 +546,13 @@ export class CardsViewComponent implements OnInit {
 					<h5>Add Angular CDK</h5>
 					<ul style="font-size: 26px; width: 100%;">
 						<li>Install angular CDK
-							<pre class="fragment" style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>npm install --save @angular/cdk</code></pre>
+							<pre class="fragment"
+								style="width: 100%;height: 100%;"><code class="language-bash" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>npm install --save @angular/cdk</code></pre>
 						</li>
 						<li class="fragment">Add ScrollingModule for virtual scroll
 							<div class="fragment">
 								<small style="margin-top: 20px;">app.module.ts:</small>
-								<pre style="width: 100%;height: 100%; margin: 0;s"><code class="language-ts" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>import {ScrollingModule} from '@angular/cdk/scrolling';
+								<pre style="width: 100%;height: 100%; margin: 0;"><code class="language-ts" style="max-height: 100%; padding: 20px;font-size: 1.2rem;line-height: 1;" data-trim data-noescape>import {ScrollingModule} from '@angular/cdk/scrolling';
 
 imports: [
   ...,
@@ -390,12 +561,12 @@ imports: [
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Use Virtual Scroll</h5>
 					<ul style="font-size: 26px; width: 100%;">
-						<li >Use cdk-virtual-scroll-viewport and add styles 
+						<li>Use cdk-virtual-scroll-viewport and add styles
 							<div class="fragment">
 								<small style="margin-top: 20px;">cards-view.component.html:</small>
 								<pre style="width: 100%;height: 100%; margin: 0; white-space: pre-wrap;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1.5;" data-trim><cdk-virtual-scroll-viewport itemSize="{{cardSize / cardsInRaw}}"
@@ -418,12 +589,12 @@ imports: [
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Use Virtual Scroll</h5>
 					<ul style="font-size: 26px; width: 100%;">
-						<li >Use cdk-virtual-scroll-viewport and add styles 
+						<li>Use cdk-virtual-scroll-viewport and add styles
 							<pre style="width: 100%;height: 100%;"><code class="language-ts" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1.2;" data-trim>import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CatService } from '../../services/cat.service';
 import { ICat } from '../../interfaces/cat.interface';
@@ -447,23 +618,26 @@ export class CardsViewComponent implements OnInit {
 }</code></pre>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-7</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
-						<li>Click Events - in CardItemComponent add click events to Like & Remove and send the item to CardsView (console the item)</li>
+						<li>Click Events - in CardItemComponent add click events to Like & Remove and send the item to
+							CardsView (console the item)</li>
 						<li>Add Like mode for like and unlike mode</li>
 						<li>Server Api - in CatService add 2 apis:
 							<div>setLikeCat (Put "/api/addToFavorite/:id)",</div>
 							<div>removeLikeCat (Delete "/api/deleteCat/:id")</div>
 						</li>
-						<li>Optimistic Like - When clicking on like change it in UI without waiting for BE respond, on error revert it</li>
-						<li>Optimistic Remove - When clicking on remove item from list without waiting for BE respond, on error revert it (make sure it's sorted)</li>
+						<li>Optimistic Like - When clicking on like change it in UI without waiting for BE respond, on
+							error revert it</li>
+						<li>Optimistic Remove - When clicking on remove item from list without waiting for BE respond,
+							on error revert it (make sure it's sorted)</li>
 						<li>Optinal - add toast on error to notify the user that something went wrong</li>
 					</ol>
 				</section>
@@ -523,7 +697,7 @@ handleRemoveClick(catItem: ICat) {
 					<ul style="font-size: 26px; width: 100%;">
 						<li>Make server request for:
 							<div style="font-size: 85%; margin-left: 20px;">
-								<div>Like   - Put:    "/api/addToFavorite/:id",</div>
+								<div>Like - Put: "/api/addToFavorite/:id",</div>
 								<div>Remove - Delete: "/api/deleteCat/:id"</div>
 							</div>
 							<div>
@@ -642,7 +816,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 							<div>
 								<small style="margin-top: 15px;">cards-view.component.ts:</small>
 								<pre style="width: 100%;height: 100%;"><code class="language-ts" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1.1;" data-trim data-noescape>export class CardsViewComponent implements OnInit {
-  
+
   handleLikeClickError(catBeforeChange: ICat, error) {
     console.warn(error);
     const mess = `Could not like ${catBeforeChange.name} cat`;
@@ -670,12 +844,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 						</li>
 					</ul>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-8</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
 						<li>Responsice Breaks - add 3 breaks [0-728px], [729px-1024px], [1025px-INFINTE]</li>
 						<li>Reponsive style - for break:
@@ -683,13 +857,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 								<li>[1025px-INFINTE] - layout will stay as before (4 cards in row)</li>
 								<li>[729px-1024px]:
 									<ul>
-										<li>layout will be changed - sidebar will move to be under header, taking full row width, show navigation horizontaly</li>
+										<li>layout will be changed - sidebar will move to be under header, taking full
+											row width, show navigation horizontaly</li>
 										<li>show 2 cards in row instead of 4</li>
 									</ul>
 								</li>
 								<li>[0-728px]:
 									<ul>
-										<li>layout will be changed - sidebar will move to be under header, taking full row width, show navigation horizontaly</li>
+										<li>layout will be changed - sidebar will move to be under header, taking full
+											row width, show navigation horizontaly</li>
 										<li>show 1 cards in row instead of 4</li>
 									</ul>
 								</li>
@@ -731,7 +907,7 @@ $break-3: "(min-width: 1025px)";</code></pre>
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Responsive</h5>
@@ -767,7 +943,7 @@ $break-3: "(min-width: 1025px)";</code></pre>
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Responsive</h5>
@@ -802,13 +978,13 @@ $break-3: "(min-width: 1025px)";</code></pre>
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Responsive</h5>
 					<ul style="font-size: 26px; width: 100%;width: 100%;">
 						<li>Make Virtual Scroll Responsive
-						<div class="fragment">
+							<div class="fragment">
 								<small style="margin-top: 15px;">cards-view.component.ts:</small>
 								<pre style="width: 100%;height: 100%; margin:0;"><code class="language-ts" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1.1;" data-trim data-noescape>export class CardsViewComponent implements OnInit {
   cardSize = 300;
@@ -834,14 +1010,14 @@ $break-3: "(min-width: 1025px)";</code></pre>
 							</div>
 						</li>
 					</ul>
-	</code>
+					</code>
 				</section>
-            </section>
-            <section>
-                <section>
+			</section>
+			<section>
+				<section>
 					<h2>Exercise-9</h2>
 				</section>
-                <section>
+				<section>
 					<ol class="list">
 						<li>About Module - create aboute module with router</li>
 						<li>About Component - create aboute component and connect it to module</li>
@@ -875,8 +1051,8 @@ $break-3: "(min-width: 1025px)";</code></pre>
 						</li>
 					</ul>
 				</section>
-            </section>
-        </div>
+			</section>
+		</div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>

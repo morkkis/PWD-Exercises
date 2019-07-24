@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/night.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.min.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../../revealjs/css/print/pdf.css' : '../../revealjs/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.reset-img {
+		  border: 0 !important;
+		  background: none !important;
+		  box-shadow: none !important;
+		}
+        #chapters {
+            margin: 0;
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 20% 20% 20% 20% 20%;
+			grid-auto-flow: column;
+			font-size: 34px;
+			grid-gap: 7px;
+        }
+		.reveal .list {
+			font-size: 30px;
+		}
+		.list > li {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+            <section>
+                <section>
+					<h2>Exercise-0</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>Initial "cat-finder" project in angular</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-1</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>In app.component.html - Create card width: height 300px, width 200px, border 1px</li>
+						<li>In app.component.html - Create and align 8 cards</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-2</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>In app.component.html - Define and create app layout with header, footer, sidebar & content container</li>
+						<li>In app.component.html - Put in content container all 8 cards</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-3</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>Break layout to components - create component for header, footer, sidebar & content container and use it in app.component.html</li>
+						<li>Create cards-view component and put all 8 cards in it</li>
+						<li>Add route - for route "" load cards-view component</li>
+						<li>Create card-item component</li>
+						<li>move card styles and data to card-item component</li>
+						<li>in cards-view component use card-item component to render 8 cards</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-4</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>Style card-item component - add fields and styles to component</li>
+						<li>Add navigations - in sidebar component add navigations to "Main" (route "/") and to "About" (route "/about")</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-5</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>Mock Server - Clone mock server, install all dependencies, start it</li>
+						<li>Proxy - proxy "/api/*" requests to mock server (port 4202)</li>
+						<li>Create Cat interface - age: number; breed: string; coat: string; gender: 'Male' | 'Female'; id: number; imgUrl: string; like: boolean; name: string;</li>
+						<li>Request cat list - create cat service with getCatList method to request lcat list (GET: 'api/getCatList')</li>
+						<li>get cat list - in CardsView make a request for cat list using the service and save the result</li>
+						<li>Reder the cat list - use *ngFor</li>
+						<li>Bind cat data - in CardItemComponent get cat data (name, age, etc.) and show it in html</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-6</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>CDK - install "@angular/cdk"</li>
+						<li>ScrollingModule - import ScrollingModule in AppModule</li>
+						<li>Use cdk-virtual-scroll-viewport to render CardItemComponent</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-7</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>Click Events - in CardItemComponent add click events to Like & Remove and send the item to CardsView (console the item)</li>
+						<li>Add Like mode for like and unlike mode</li>
+						<li>Server Api - in CatService add 2 apis:
+							<div>setLikeCat (Put "/api/addToFavorite/:id)",</div>
+							<div>removeLikeCat (Delete "/api/deleteCat/:id")</div>
+						</li>
+						<li>Optimistic Like - When clicking on like change it in UI without waiting for BE respond, on error revert it</li>
+						<li>Optimistic Remove - When clicking on remove item from list without waiting for BE respond, on error revert it (make sure it's sorted)</li>
+						<li>Optinal - add toaster on error to inform the user somthing went wrong</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-8</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>Responsice Breaks - add 3 breaks [0-728px], [729px-1024px], [1025px-INFINTE]</li>
+						<li>Reponsive style - for break:
+							<ul>
+								<li>[1025px-INFINTE] - layout will stay the same (4 cards in row)</li>
+								<li>[729px-1024px]:
+									<ul>
+										<li>layout will be chaged - sidebar will move to be under header, take row width, show navigtors horizontal</li>
+										<li>show 2 cards in row instead of 4</li>
+									</ul>
+								</li>
+								<li>[0-728px]:
+									<ul>
+										<li>layout will be chaged - sidebar will move to be under header, take row width, show navigtors horizontal</li>
+										<li>show 1 cards in row instead of 4</li>
+									</ul>
+								</li>
+							</ul>
+							
+						</li>
+						<li>Reponsive virtual scroll - make cdk-virtual-scroll-viewport responsive</li>
+					</ul>
+				</section>
+            </section>
+            <section>
+                <section>
+					<h2>Exercise-9</h2>
+				</section>
+                <section>
+					<ul class="list">
+						<li>About Module - create aboute module with router</li>
+						<li>About Component - create aboute component and connect it to module</li>
+						<li>Navigation - on routing to "/about" show about module</li>
+						<li>Optiimastion Code Spliting- load about modle in lazy loading way</li>
+					</ul>
+				</section>
+            </section>
+        </div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../revealjs/plugin/markdown/marked.js' },
+				{ src: '../../revealjs/plugin/markdown/markdown.js' },
+				{ src: '../../revealjs/plugin/notes/notes.js', async: true },
+				{ src: '../../revealjs/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>

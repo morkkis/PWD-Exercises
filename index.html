@@ -839,7 +839,7 @@ export class CardsViewComponent implements OnInit {
 				<section class="slide-top" style="height: calc(100% - 120px);" data-transition="none-in">
 					<h5>Optimistic</h5>
 					<ul style="font-size: 26px; width: 100%;">
-						<li>Add event listenr for click on like & remove buttons and catch them in cards-view.component
+						<li>Add event listener for click on like & remove buttons and catch them in cards-view.component
 							<div>
 								<small style="margin-top: 20px;">cards-view.component.html:</small>
 								<pre style="width: 100%;height: 100%; margin: 0;white-space: pre-wrap;"><code class="language-html" style="max-height: 100%;padding: 20px;font-size: 1.2rem;line-height: 1.5;" data-trim><cdk-virtual-scroll-viewport itemSize="{{cardSize / cardsInRaw}}"
@@ -1019,9 +1019,38 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 					<h2>Exercise-8</h2>
 				</section>
 				<section>
+					<p style="text-align: center">Desktop</p>
+					<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/005.png" alt="">
+				</section>
+				<section data-transition="none">
+						<p style="display: flex; justify-content: space-between;"><span>Mobile</span><span>Tablet</span></p>
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/mobile/001.png" alt="">
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/tablet/001.png" alt="">
+				</section>
+				<section data-transition="none">
+						<p style="display: flex; justify-content: space-between;"><span>Mobile</span><span>Tablet</span></p>
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/mobile/002.png" alt="">
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/tablet/002.png" alt="">
+				</section>
+				<section data-transition="none">
+						<p style="display: flex; justify-content: space-between;"><span>Mobile</span><span>Tablet</span></p>
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/mobile/003.png" alt="">
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/tablet/003.png" alt="">
+				</section>
+				<section data-transition="none">
+						<p style="display: flex; justify-content: space-between;"><span>Mobile</span><span>Tablet</span></p>
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/mobile/004.png" alt="">
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/tablet/004.png" alt="">
+				</section>
+				<section data-transition="none">
+						<p style="display: flex; justify-content: space-between;"><span>Mobile</span><span>Tablet</span></p>
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/mobile/005.png" alt="">
+						<img class="reset-img" style="height: 500px" src="./assets/layout/catfinder/tablet/005.png" alt="">
+				</section>
+				<section>
 					<ol class="list">
-						<li>Responsice Breaks - add 3 breaks [0-728px], [729px-1024px], [1025px-INFINTE]</li>
-						<li>Reponsive style - for break:
+						<li>Responsive Breaks - add 3 breakpoints [0-728px], [729px-1024px], [1025px-INFINTE]</li>
+						<li>Responsive style - for break:
 							<ul>
 								<li>[1025px-INFINTE] - layout will stay as before (4 cards in row)</li>
 								<li>[729px-1024px]:
